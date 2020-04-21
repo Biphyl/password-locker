@@ -36,5 +36,19 @@ class User:
         ''' 
 
         for user in cls.user_list:
-            if user.account_name == any:
+            if user.account_name == account_name:
                 return user
+
+
+    @classmethod
+    def user_exist(cls,login_username):
+        '''
+        Method that checcks if a user exists from the user list
+        Args:
+            login_username: login_username to search if it exists
+        Returns :True of false depending if the user exists
+        '''
+        for user in cls.user_list:
+            if user.login_username == login_username:
+                return True
+        return False
