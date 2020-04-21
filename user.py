@@ -25,12 +25,12 @@ class User:
         User.user_list.remove(self)
 
     @classmethod
-    def find_by_account_name(cls,any):
+    def find_by_account_name(cls,account_name):
         '''
-        Method that taked in any value and returns the user that matches the value
+        Method that taked in account_name value and returns the user that matches the value
 
         Args:
-            any: Value of the account_name to search for
+            account_name: Value of the account_name to search for
         Returns : 
             user that matches the account_name
         ''' 
