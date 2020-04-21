@@ -24,3 +24,9 @@ def find_user(account_name):
     Function that finds a user by username and returns the user
     '''
     return User.find_by_account_name(account_name)
+
+def check_existing_user(username):
+    '''
+    Function that check if a user exists with that number and return a Boolean
+    '''
+    return User.user_exist(username)
