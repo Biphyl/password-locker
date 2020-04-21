@@ -1,3 +1,7 @@
+import random
+import string
+import pyperclip
+
 class User:
     """ 
     Class that generate new instance of user.

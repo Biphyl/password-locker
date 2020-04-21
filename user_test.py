@@ -1,5 +1,5 @@
 import unittest # Importing unittest
-from user import User # Importing the User class
+from user import User # Importing class User
 
 class TestUser(unittest.TestCase):
     """
@@ -89,6 +89,8 @@ class TestUser(unittest.TestCase):
         method that returns a list of all users saved
         '''
         self.assertEqual(User.display_users(),User.user_list)
+
+        
 
 
 
