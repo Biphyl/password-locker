@@ -17,4 +17,14 @@ class TestUser(unittest.TestCase):
         self.new_user = User("facebook","biron odhiambo","biron 4745") # Create user object
 
 
-        
+    def test_init(self):
+        '''
+        test_init test case to test if the object is initialized properly
+        '''
+        self.assertEqual(self.new_user.account_name,"facebook")
+        self.assertEqual(self.new_user.login_username,"biron odhiambo")
+        self.assertEqual(self.new_user.user_password,"biron 4745")
+
+
+if __name__=='__main__':
+    unittest.main()
