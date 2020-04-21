@@ -40,11 +40,11 @@ def display_users(account):
     return User.display_users()
 
 
-def user_exist(account,username,password):
+def user_exist(username,password):
     '''
     Function that checks if an account really exists
     '''
-    User.user_exist(account,username,password)
+    User.user_exist(username)
     return username
 
 
@@ -82,7 +82,7 @@ def main():
 				print(' ')
 				while True:
 					print("-"*60)
-					print('Navigation codes: \n cc-Create a Credential \n dc-Display Credentials \n copy-Copy Password \n ex-Exit')
+					print('Navigation codes: \n cc-Create a Credential \n dc-Display User Credentials \n copy-Copy Password \n ex-Exit')
 					short_code = input('Enter a choice: ').lower().strip()
 					print("-"*60)
 					if short_code == 'ex':
