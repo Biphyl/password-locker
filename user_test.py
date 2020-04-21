@@ -17,6 +17,7 @@ class TestUser(unittest.TestCase):
         self.new_user = User("facebook","biron odhiambo","biron 4745") # Create user object
 
 
+
     def test_init(self):
         '''
         test_init test case to test if the object is initialized properly
@@ -32,6 +33,21 @@ class TestUser(unittest.TestCase):
         '''
         self.new_user.save_user() # saving the new user
         self.assertEqual(len(User.user_list),1)
+
+
+    def test_save_multiple_user(self):
+        '''
+        test_save_multiple_user to check if we can save multiple user
+        objects to our user_list
+        '''
+        self.new_user.save_user()
+        test_user = User("Instagram","biron_odhiambo","biron4745")
+
+        test_user.save_user()
+        self.assertEqual(len(User.user_list),2)
+
+
+
 
 
 
